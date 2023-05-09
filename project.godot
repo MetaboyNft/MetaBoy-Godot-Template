@@ -1,0 +1,52 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="MetaBoyGameTemplate"
+run/main_scene="res://UI/LoginScreen.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Loopring="*res://addons/godot-loopring-sdk/Loopring.gd"
+LoopringGlobals="*res://addons/godot-loopring-sdk/LoopringGlobals.gd"
+Stacks="*res://addons/godot-stacks-sdk/Stacks.gd"
+StacksGlobals="*res://addons/godot-stacks-sdk/StacksGlobals.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/godot-loopring-sdk/plugin.cfg", "res://addons/godot-stacks-sdk/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[mono]
+
+project/assembly_name="MetaBoyGameTemplate"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"

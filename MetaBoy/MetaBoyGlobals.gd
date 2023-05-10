@@ -148,6 +148,11 @@ func get_stx_metadata_for_id(nft_id: int) -> Dictionary:
 	
 	return metadata
 
+# Get the number of vframes the given Background trait has.
+# Assumes that all backgrounds have 100x100 frames.
+func get_vframes_count(background: Texture) -> int:
+	return int(background.get_height() / 100)
+
 # The MetaBoy the user has selected.
 var selected_metaboy = MetaBoyData.new() setget set_selected_metaboy, get_selected_metaboy
 

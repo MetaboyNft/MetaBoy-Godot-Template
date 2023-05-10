@@ -11,6 +11,7 @@ onready var animation_player = $AnimationPlayer
 onready var body_root = $MainBody
 
 # MetaBoy parts
+onready var part_background = $MainBody/Background
 onready var part_back = $MainBody/Back
 onready var part_body = $MainBody/Body
 onready var part_body_02 = $MainBody/Body2
@@ -26,6 +27,7 @@ func _ready():
 # Updates the MetaBoyData object to match the current sprite textures.
 func update_attributes() -> void:
 	var attributes = {
+		"Background": get_attribute_from_sprite(part_background),
 		"Back": get_attribute_from_sprite(part_back),
 		"Body": get_attribute_from_sprite(part_body),
 		"Face": get_attribute_from_sprite(part_face),
@@ -60,6 +62,12 @@ func set_metaboy_attributes(attributes: Dictionary) -> void:
 				part_back.texture = load(path)
 				metaboy_data.back = value
 				show_back = true
+			elif key == "Background":
+				metaboy_data.background = value
+				part_background.texture = load(path)
+				# NOTE: Some backgrounds have a different number of frames, so
+				# they won't loop properly with the rest of the sprites.
+				part_background.vframes = MetaBoyGlobals.get_vframes_count(part_background.texture)
 			elif key == "Body":
 				part_body.texture = load(path)
 				metaboy_data.body = value

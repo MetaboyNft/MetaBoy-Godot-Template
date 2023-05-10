@@ -59,7 +59,7 @@ margin_left = 18.0
 margin_right = 534.0
 rect_min_size = Vector2( 516, 0 )
 size_flags_horizontal = 6
-columns = 4
+columns = 5
 
 [node name="MetaBoy - First Odyssey" type="Tabs" parent="UI/TabContainer"]
 visible = false
@@ -103,7 +103,7 @@ margin_left = 18.0
 margin_right = 534.0
 rect_min_size = Vector2( 516, 0 )
 size_flags_horizontal = 6
-columns = 4
+columns = 5
 
 [node name="FrontLayer" type="Control" parent="."]
 margin_right = 643.0

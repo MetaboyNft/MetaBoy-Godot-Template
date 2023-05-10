@@ -18,7 +18,7 @@ margin_bottom = 312.0
 mouse_filter = 1
 tab_align = 0
 
-[node name="MetaBoy" type="Tabs" parent="UI/TabContainer"]
+[node name="MetaBoy OG Collection" type="Tabs" parent="UI/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -27,7 +27,7 @@ margin_right = -4.0
 margin_bottom = -4.0
 mouse_filter = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/TabContainer/MetaBoy"]
+[node name="MarginContainer" type="MarginContainer" parent="UI/TabContainer/MetaBoy OG Collection"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 1
@@ -36,7 +36,7 @@ custom_constants/margin_top = 4
 custom_constants/margin_left = 8
 custom_constants/margin_bottom = 4
 
-[node name="NoMetaBoyLabel" type="Label" parent="UI/TabContainer/MetaBoy/MarginContainer"]
+[node name="NoMetaBoyLabel" type="Label" parent="UI/TabContainer/MetaBoy OG Collection/MarginContainer"]
 unique_name_in_owner = true
 margin_left = 8.0
 margin_top = 95.0
@@ -45,7 +45,7 @@ margin_bottom = 109.0
 text = "No MetaBoys found."
 align = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="UI/TabContainer/MetaBoy/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/TabContainer/MetaBoy OG Collection/MarginContainer"]
 margin_left = 8.0
 margin_top = 4.0
 margin_right = 560.0
@@ -53,7 +53,7 @@ margin_bottom = 200.0
 mouse_filter = 1
 follow_focus = true
 
-[node name="MetaBoyGrid" type="GridContainer" parent="UI/TabContainer/MetaBoy/MarginContainer/ScrollContainer"]
+[node name="MetaBoyGrid" type="GridContainer" parent="UI/TabContainer/MetaBoy OG Collection/MarginContainer/ScrollContainer"]
 unique_name_in_owner = true
 margin_left = 18.0
 margin_right = 534.0
@@ -61,7 +61,7 @@ rect_min_size = Vector2( 516, 0 )
 size_flags_horizontal = 6
 columns = 5
 
-[node name="MetaBoy - First Odyssey" type="Tabs" parent="UI/TabContainer"]
+[node name="MetaBoy STX Collection" type="Tabs" parent="UI/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -71,7 +71,7 @@ margin_right = -4.0
 margin_bottom = -4.0
 mouse_filter = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/TabContainer/MetaBoy - First Odyssey"]
+[node name="MarginContainer" type="MarginContainer" parent="UI/TabContainer/MetaBoy STX Collection"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 1
@@ -80,7 +80,7 @@ custom_constants/margin_top = 4
 custom_constants/margin_left = 8
 custom_constants/margin_bottom = 4
 
-[node name="NoMetaBoySTXLabel" type="Label" parent="UI/TabContainer/MetaBoy - First Odyssey/MarginContainer"]
+[node name="NoMetaBoySTXLabel" type="Label" parent="UI/TabContainer/MetaBoy STX Collection/MarginContainer"]
 unique_name_in_owner = true
 margin_left = 8.0
 margin_top = 94.0
@@ -89,7 +89,7 @@ margin_bottom = 108.0
 text = "No STX MetaBoys found."
 align = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="UI/TabContainer/MetaBoy - First Odyssey/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/TabContainer/MetaBoy STX Collection/MarginContainer"]
 margin_left = 8.0
 margin_top = 4.0
 margin_right = 560.0
@@ -97,7 +97,7 @@ margin_bottom = 198.0
 mouse_filter = 1
 follow_focus = true
 
-[node name="MetaBoySTXGrid" type="GridContainer" parent="UI/TabContainer/MetaBoy - First Odyssey/MarginContainer/ScrollContainer"]
+[node name="MetaBoySTXGrid" type="GridContainer" parent="UI/TabContainer/MetaBoy STX Collection/MarginContainer/ScrollContainer"]
 unique_name_in_owner = true
 margin_left = 18.0
 margin_right = 534.0

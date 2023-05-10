@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://MetaBoy/MetaBoy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MetaBoy/MetaBoyDisplay.gd" type="Script" id=5]
+
+[node name="MetaBoyDisplay" type="Control"]
+margin_right = 100.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 128 )
+script = ExtResource( 5 )
+
+[node name="Button" type="Button" parent="."]
+margin_right = 100.0
+margin_bottom = 128.0
+
+[node name="Name" type="Label" parent="."]
+margin_top = 88.0
+margin_right = 100.0
+margin_bottom = 123.0
+mouse_filter = 1
+text = "MetaBoy
+#000"
+align = 1
+autowrap = true
+
+[node name="MetaBoy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 50, 50 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

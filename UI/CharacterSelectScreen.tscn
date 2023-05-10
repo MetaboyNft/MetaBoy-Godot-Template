@@ -1,0 +1,152 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/CharacterSelectScreen.gd" type="Script" id=1]
+
+[node name="CharacterSelectScreen" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="UI" type="Control" parent="."]
+
+[node name="TabContainer" type="TabContainer" parent="UI"]
+margin_left = 32.0
+margin_top = 72.0
+margin_right = 608.0
+margin_bottom = 312.0
+mouse_filter = 1
+tab_align = 0
+
+[node name="MetaBoy" type="Tabs" parent="UI/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TabContainer/MetaBoy"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+custom_constants/margin_right = 8
+custom_constants/margin_top = 4
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 4
+
+[node name="NoMetaBoyLabel" type="Label" parent="UI/TabContainer/MetaBoy/MarginContainer"]
+unique_name_in_owner = true
+margin_left = 8.0
+margin_top = 95.0
+margin_right = 560.0
+margin_bottom = 109.0
+text = "No MetaBoys found."
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/TabContainer/MetaBoy/MarginContainer"]
+margin_left = 8.0
+margin_top = 4.0
+margin_right = 560.0
+margin_bottom = 200.0
+mouse_filter = 1
+follow_focus = true
+
+[node name="MetaBoyGrid" type="GridContainer" parent="UI/TabContainer/MetaBoy/MarginContainer/ScrollContainer"]
+unique_name_in_owner = true
+margin_left = 18.0
+margin_right = 534.0
+rect_min_size = Vector2( 516, 0 )
+size_flags_horizontal = 6
+columns = 4
+
+[node name="MetaBoy - First Odyssey" type="Tabs" parent="UI/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 34.0
+margin_right = -4.0
+margin_bottom = -4.0
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TabContainer/MetaBoy - First Odyssey"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+custom_constants/margin_right = 8
+custom_constants/margin_top = 4
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 4
+
+[node name="NoMetaBoySTXLabel" type="Label" parent="UI/TabContainer/MetaBoy - First Odyssey/MarginContainer"]
+unique_name_in_owner = true
+margin_left = 8.0
+margin_top = 94.0
+margin_right = 560.0
+margin_bottom = 108.0
+text = "No STX MetaBoys found."
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/TabContainer/MetaBoy - First Odyssey/MarginContainer"]
+margin_left = 8.0
+margin_top = 4.0
+margin_right = 560.0
+margin_bottom = 198.0
+mouse_filter = 1
+follow_focus = true
+
+[node name="MetaBoySTXGrid" type="GridContainer" parent="UI/TabContainer/MetaBoy - First Odyssey/MarginContainer/ScrollContainer"]
+unique_name_in_owner = true
+margin_left = 18.0
+margin_right = 534.0
+rect_min_size = Vector2( 516, 0 )
+size_flags_horizontal = 6
+columns = 4
+
+[node name="FrontLayer" type="Control" parent="."]
+margin_right = 643.0
+margin_bottom = 360.0
+mouse_filter = 2
+
+[node name="BackButton" type="Button" parent="FrontLayer"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -289.5
+margin_top = -28.0
+margin_right = -247.5
+margin_bottom = -8.0
+text = "Back"
+
+[node name="Title" type="Label" parent="FrontLayer"]
+margin_left = 64.0
+margin_top = 24.0
+margin_right = 576.0
+margin_bottom = 72.0
+text = "Choose Your Character"
+align = 1
+
+[node name="LoadingBg" type="ColorRect" parent="FrontLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 640, 360 )
+mouse_filter = 1
+color = Color( 0.784314, 0.784314, 0.784314, 0.305882 )
+
+[node name="LoadingLabel" type="Label" parent="FrontLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -256.0
+margin_top = -24.0
+margin_right = 256.0
+margin_bottom = 24.0
+text = "Loading..."
+align = 1
+
+[connection signal="tab_changed" from="UI/TabContainer" to="." method="_on_TabContainer_tab_changed"]
+[connection signal="pressed" from="FrontLayer/BackButton" to="." method="_on_BackButton_pressed"]

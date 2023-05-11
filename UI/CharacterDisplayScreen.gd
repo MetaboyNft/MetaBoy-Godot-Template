@@ -49,4 +49,4 @@ func _on_PlayTopDownButton_pressed():
 	get_tree().change_scene("res://TopDownExample/TopDownScene.tscn")
 
 func _on_PlayPlatformerButton_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://PlatformerExample/PlatformerScene.tscn")

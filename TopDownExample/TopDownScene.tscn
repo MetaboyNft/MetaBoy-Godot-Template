@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TopDownExample/MetaBoyTopDown.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://TopDownExample/TopDownScene.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[node name="TopDownScene" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Blocks" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Block" type="StaticBody2D" parent="Blocks"]
+position = Vector2( 160, 160 )
+
+[node name="Sprite" type="Sprite" parent="Blocks/Block"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block"]
+shape = SubResource( 1 )
+
+[node name="Block2" type="StaticBody2D" parent="Blocks"]
+position = Vector2( 160, 224 )
+
+[node name="Sprite" type="Sprite" parent="Blocks/Block2"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block2"]
+shape = SubResource( 1 )
+
+[node name="Block3" type="StaticBody2D" parent="Blocks"]
+position = Vector2( 480, 96 )
+
+[node name="Sprite" type="Sprite" parent="Blocks/Block3"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block3"]
+shape = SubResource( 1 )
+
+[node name="Block4" type="StaticBody2D" parent="Blocks"]
+position = Vector2( 480, 160 )
+
+[node name="Sprite" type="Sprite" parent="Blocks/Block4"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block4"]
+shape = SubResource( 1 )
+
+[node name="Block5" type="StaticBody2D" parent="Blocks"]
+position = Vector2( 544, 288 )
+
+[node name="Sprite" type="Sprite" parent="Blocks/Block5"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block5"]
+shape = SubResource( 1 )
+
+[node name="Block6" type="StaticBody2D" parent="Blocks"]
+position = Vector2( 480, 288 )
+
+[node name="Sprite" type="Sprite" parent="Blocks/Block6"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block6"]
+shape = SubResource( 1 )
+
+[node name="Block7" type="StaticBody2D" parent="Blocks"]
+position = Vector2( 160, 96 )
+
+[node name="Sprite" type="Sprite" parent="Blocks/Block7"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block7"]
+shape = SubResource( 1 )
+
+[node name="Block8" type="StaticBody2D" parent="Blocks"]
+position = Vector2( 96, 96 )
+
+[node name="Sprite" type="Sprite" parent="Blocks/Block8"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block8"]
+shape = SubResource( 1 )
+
+[node name="Block9" type="StaticBody2D" parent="Blocks"]
+position = Vector2( 288, 288 )
+
+[node name="Sprite" type="Sprite" parent="Blocks/Block9"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block9"]
+shape = SubResource( 1 )
+
+[node name="MetaBoyTopDown" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 192 )
+
+[node name="ExitButton" type="Button" parent="."]
+margin_left = 32.0
+margin_top = 24.0
+margin_right = 67.0
+margin_bottom = 44.0
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 192.0
+margin_top = 24.0
+margin_right = 448.0
+margin_bottom = 38.0
+text = "Move with arrow keys"
+align = 1
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]

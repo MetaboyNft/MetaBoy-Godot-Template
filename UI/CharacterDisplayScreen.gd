@@ -44,3 +44,9 @@ func _on_SpeedSlider_value_changed(value):
 	speed_label.text = "Speed: " + str(value)
 	if metaboy.animation_player.is_playing():
 		metaboy.animation_player.play(metaboy.animation_player.current_animation, -1, value)
+
+func _on_PlayTopDownButton_pressed():
+	get_tree().change_scene("res://TopDownExample/TopDownScene.tscn")
+
+func _on_PlayPlatformerButton_pressed():
+	pass # Replace with function body.

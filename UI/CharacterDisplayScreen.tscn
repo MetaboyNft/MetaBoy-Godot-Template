@@ -42,9 +42,9 @@ color = Color( 0.627451, 0.627451, 0.627451, 0.258824 )
 
 [node name="Attributes" type="VBoxContainer" parent="Control/BackPanel"]
 margin_left = 256.0
-margin_top = 80.0
+margin_top = 64.0
 margin_right = 360.0
-margin_bottom = 333.0
+margin_bottom = 317.0
 
 [node name="Header" type="Label" parent="Control/BackPanel/Attributes"]
 margin_right = 104.0
@@ -111,9 +111,9 @@ autowrap = true
 
 [node name="AttributesValues" type="VBoxContainer" parent="Control/BackPanel"]
 margin_left = 344.0
-margin_top = 80.0
+margin_top = 64.0
 margin_right = 608.0
-margin_bottom = 333.0
+margin_bottom = 317.0
 
 [node name="Header" type="Label" parent="Control/BackPanel/AttributesValues"]
 margin_right = 264.0
@@ -194,6 +194,20 @@ margin_right = 106.0
 margin_bottom = 332.0
 text = "Back"
 
+[node name="PlayTopDownButton" type="Button" parent="Control/BackPanel"]
+margin_left = 256.0
+margin_top = 312.0
+margin_right = 420.0
+margin_bottom = 332.0
+text = "Play Top-Down Example"
+
+[node name="PlayPlatformerButton" type="Button" parent="Control/BackPanel"]
+margin_left = 440.0
+margin_top = 312.0
+margin_right = 607.0
+margin_bottom = 332.0
+text = "Play Platformer Example"
+
 [node name="IdleButton" type="Button" parent="Control/BackPanel"]
 margin_left = 64.0
 margin_top = 205.0
@@ -228,12 +242,14 @@ value = 2.0
 [node name="CollectionLabel" type="Label" parent="Control/BackPanel"]
 unique_name_in_owner = true
 margin_left = 256.0
-margin_top = 277.0
+margin_top = 261.0
 margin_right = 384.0
-margin_bottom = 291.0
+margin_bottom = 275.0
 text = "Collection: OG"
 
 [connection signal="pressed" from="Control/BackPanel/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Control/BackPanel/PlayTopDownButton" to="." method="_on_PlayTopDownButton_pressed"]
+[connection signal="pressed" from="Control/BackPanel/PlayPlatformerButton" to="." method="_on_PlayPlatformerButton_pressed"]
 [connection signal="pressed" from="Control/BackPanel/IdleButton" to="." method="_on_IdleButton_pressed"]
 [connection signal="pressed" from="Control/BackPanel/RunButton" to="." method="_on_RunButton_pressed"]
 [connection signal="value_changed" from="Control/BackPanel/SpeedSlider" to="." method="_on_SpeedSlider_value_changed"]

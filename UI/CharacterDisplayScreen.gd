@@ -41,7 +41,7 @@ func _on_RunButton_pressed():
 	metaboy.animation_player.play("run", -1, speed_slider.value)
 
 func _on_SpeedSlider_value_changed(value):
-	speed_label.text = "Speed: " + str(value)
+	speed_label.text = "Speed: x" + str(value)
 	if metaboy.animation_player.is_playing():
 		metaboy.animation_player.play(metaboy.animation_player.current_animation, -1, value)
 

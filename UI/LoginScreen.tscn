@@ -138,13 +138,13 @@ margin_bottom = 262.0
 rect_min_size = Vector2( 183, 178 )
 custom_constants/separation = 32
 
-[node name="ButtonHiro" type="Button" parent="LoginUI/StacksMenu/Buttons"]
+[node name="ButtonLeather" type="Button" parent="LoginUI/StacksMenu/Buttons"]
 unique_name_in_owner = true
 margin_right = 183.6
 margin_bottom = 38.4
 rect_min_size = Vector2( 183.6, 38.4 )
 focus_neighbour_right = NodePath("../../../DisconnectWalletButton")
-text = "Hiro Wallet"
+text = "Leather Wallet"
 
 [node name="WalletInfo" type="PanelContainer" parent="LoginUI"]
 margin_left = 320.0

@@ -9,7 +9,6 @@ This project contains examples on how a MetaBoy web3 game can be set up. It uses
 
 To use the Loopring SDK, you'll need a Loopring-compatible wallet installed in your browser. Here are some wallets you can use:
 - MetaMask (https://metamask.io/)
-- GameStop Wallet (https://wallet.gamestop.com/)
 
 To use the Stacks SDK, you'll need the Hiro Wallet installed in your browser.
 - https://wallet.hiro.so/

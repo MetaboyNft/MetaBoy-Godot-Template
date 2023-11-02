@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://addons/godot-loopring-sdk/utils/WalletConnector.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-loopring-sdk/images/Metamask-logo.png" type="Texture" id=2]
-[ext_resource path="res://addons/godot-loopring-sdk/images/lgme.png" type="Texture" id=3]
 [ext_resource path="res://addons/godot-loopring-sdk/images/WalletConnect-logo.png" type="Texture" id=4]
 [ext_resource path="res://UI/LoginScreen.gd" type="Script" id=5]
 [ext_resource path="res://addons/godot-stacks-sdk/utils/WalletConnector.gd" type="Script" id=10]
@@ -94,24 +93,11 @@ texture_hover = ExtResource( 2 )
 texture_focused = ExtResource( 2 )
 expand = true
 
-[node name="ButtonGamestop" type="TextureButton" parent="LoginUI/LoopringMenu/Buttons"]
+[node name="ButtonWalletConnect" type="TextureButton" parent="LoginUI/LoopringMenu/Buttons"]
 unique_name_in_owner = true
 margin_top = 70.0
 margin_right = 183.6
 margin_bottom = 108.4
-rect_min_size = Vector2( 183.6, 38.4 )
-focus_neighbour_right = NodePath("../../../DisconnectWalletButton")
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 3 )
-texture_focused = ExtResource( 3 )
-expand = true
-
-[node name="ButtonWalletConnect" type="TextureButton" parent="LoginUI/LoopringMenu/Buttons"]
-unique_name_in_owner = true
-margin_top = 140.0
-margin_right = 183.6
-margin_bottom = 178.4
 rect_min_size = Vector2( 183.6, 38.4 )
 focus_neighbour_right = NodePath("../../../DisconnectWalletButton")
 texture_normal = ExtResource( 4 )

@@ -3,7 +3,6 @@ extends Node2D
 # Loopring wallet buttons
 onready var button_metamask = $"%ButtonMetamask"
 onready var button_walletconnect = $"%ButtonWalletConnect"
-onready var button_gamestop = $"%ButtonGamestop"
 
 # Stacks wallet buttons
 onready var button_leather = $"%ButtonLeather"
@@ -52,7 +51,6 @@ func _ready():
 	# Connect the buttons to their respective callbacks
 	button_metamask.connect("pressed", self, "Button_Metamask")
 	button_walletconnect.connect("pressed", self, "Button_Metamask")
-	button_gamestop.connect("pressed", self, "Button_GME")
 	
 	button_leather.connect("pressed", self, "Button_Leather")
 	
@@ -64,12 +62,9 @@ func _process(_delta):
 	if button_metamask.has_focus():
 		if !animation_player.current_animation == "select_first":
 			animation_player.play("select_first")
-	elif button_gamestop.has_focus():
+	elif button_walletconnect.has_focus():
 		if !animation_player.current_animation == "select_second":
 			animation_player.play("select_second")
-	elif button_walletconnect.has_focus():
-		if !animation_player.current_animation == "select_third":
-			animation_player.play("select_third")
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		if loading_rect.visible:
@@ -80,11 +75,6 @@ func _process(_delta):
 				login_ui.hide()
 				login_prompt_ui.show()
 				login_process_button.grab_focus()
-
-func Button_GME():
-	show_loading_ui()
-	loopring_wallet_connector.connect_to_web3_wallet("gme")
-	LoopringGlobals.set_wallet_type(LoopringGlobals.WalletType.GME)
 
 func Button_Metamask():
 	show_loading_ui()
@@ -168,7 +158,7 @@ func _on_LoginProcessButton_pressed():
 	login_ui.show()
 	loopring_menu.show()
 	stacks_menu.hide()
-	button_gamestop.grab_focus()
+	button_metamask.grab_focus()
 
 func _on_DisconnectWalletButton_pressed():
 	var item = wallet_dropdown.get_item_text(wallet_dropdown.selected)

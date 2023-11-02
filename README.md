@@ -10,8 +10,8 @@ This project contains examples on how a MetaBoy web3 game can be set up. It uses
 To use the Loopring SDK, you'll need a Loopring-compatible wallet installed in your browser. Here are some wallets you can use:
 - MetaMask (https://metamask.io/)
 
-To use the Stacks SDK, you'll need the Hiro Wallet installed in your browser.
-- https://wallet.hiro.so/
+To use the Stacks SDK, you'll need the Leather Wallet installed in your browser.
+- https://leather.io/
 
 ### Setup
 Download or clone this repository, and then import the project into Godot. You should see the project with the name `MetaBoyGameTemplate`. Feel free to change this name later on.

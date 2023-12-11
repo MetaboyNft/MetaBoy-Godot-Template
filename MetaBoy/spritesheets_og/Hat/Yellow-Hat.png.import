@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dark Purple Wizard Hat.png-ac0e9ead33145abd792cc75bae8e78a7.stex"
+path="res://.import/Yellow-Hat.png-9d1a309a5b687abb54a3c64ed84063d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MetaBoy/spritesheets_og/Hat/Dark Purple Wizard Hat.png"
-dest_files=[ "res://.import/Dark Purple Wizard Hat.png-ac0e9ead33145abd792cc75bae8e78a7.stex" ]
+source_file="res://MetaBoy/spritesheets_og/Hat/Yellow-Hat.png"
+dest_files=[ "res://.import/Yellow-Hat.png-9d1a309a5b687abb54a3c64ed84063d0.stex" ]
 
 [params]
 

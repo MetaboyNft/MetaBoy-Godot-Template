@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Plague -Doctor-Mask.png-76eb6550ca8a592aecb8ec33db4bc7b1.stex"
+path="res://.import/Purple-Wizard-Hat.png-111875ef6ce4f0260bd62121cd39c2ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MetaBoy/spritesheets_og/Hat/Plague -Doctor-Mask.png"
-dest_files=[ "res://.import/Plague -Doctor-Mask.png-76eb6550ca8a592aecb8ec33db4bc7b1.stex" ]
+source_file="res://MetaBoy/spritesheets_og/Hat/Purple-Wizard-Hat.png"
+dest_files=[ "res://.import/Purple-Wizard-Hat.png-111875ef6ce4f0260bd62121cd39c2ea.stex" ]
 
 [params]
 
